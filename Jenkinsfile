@@ -8,6 +8,8 @@ stages{
         dir ('/var/www') {
           sh 'pwd'
           sh 'ls'
+          checkout scm
+          sh 'ls'
         }
 
        } 
