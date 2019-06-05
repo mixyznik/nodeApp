@@ -10,6 +10,14 @@ stages{
           sh 'ls'
           checkout scm
           sh 'ls'
+          sh 'git --version'
+          echo "Branch: ${env.BRANCH_NAME}"
+          sh 'docker -v'
+          sh 'printenv'
+          sh 'yarn'
+          sh 'yarn build'
+          sh 'screen -S pencil -d -m yarn start'
+          sh 'screen -ls'
         }
 
        } 
